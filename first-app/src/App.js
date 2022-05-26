@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Hello from './components/Hello'
+import { Answer1 } from './components/Answer1.jsx'
+// import Answer1 from './components/Answer1';
 
 function App() {
+  // var u1="arun"
+  var info=[
+            { name:"arun", place:"UK",},
+           {name:"Vikash",place:"India",},
+           ]
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <Hello></Hello>
+        
+        {/* <Answer1 name={u1} place="Uk" />
+        <Answer1 name="Vikash" place="India" /> */}
+
+        {/* <Answer1 {...info[0]}/>
+        <Answer1 {...info[1]}/> */}
+
+      {info.map((elem)=>(
+        <div>
+            <h1>User1</h1>
+            <Answer1 {...elem}/>
+        </div>
+       
+      ))}
     </div>
+  
   );
 }
 
