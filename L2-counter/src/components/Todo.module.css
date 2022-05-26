@@ -1,0 +1,12 @@
+.container{
+    display:flex;
+}
+.todo{
+    /* margin-left: 50%; */
+    background-color: aqua;
+    display: flex;
+}
+.striked{
+    text-decoration: line-through;
+    display: flex;
+}
